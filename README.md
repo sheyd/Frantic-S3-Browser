@@ -81,7 +81,6 @@ Setup: The bucket for a single customer's/project's data
 	   "s3:*"
 	],
 	"Effect": "Allow",
-	"Principal": "*",
 	"Resource": [
 	   "arn:aws:s3:::testbucket-theatermania-com",
 	   "arn:aws:s3:::testbucket-theatermania-com/*"
