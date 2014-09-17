@@ -24,20 +24,18 @@ http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Irel
    of your bucket, and save the policy:
 
    {
-    "Version": "2008-10-17",
-    "Statement": [
-             {
-                "Sid": "PublicReadGetObject",
-                "Effect": "Allow",
-                "Principal": {
-                    "AWS": "*"
-                },
-                "Action": "s3:GetObject",
-                "Resource": "arn:aws:s3:::YOURBUCKETNAME/*"
-             }
-    ]
+     "Version": "2014-9-18",
+     "Statement": [
+	{
+	  "Sid": "AddPerm",
+	  "Effect": "Allow",
+	  "Principal": "*",
+	  "Action": "s3:GetObject",
+	  "Resource": "arn:aws:s3:::YOURBUCKETNAME/`*`"
+	}
+      ]
    }
-
+  
  - Enable Website Access
    Select the "Website Access" tab in Properties. Check Enabled [X], specify
    "index.html" as the Index Document and "error.html" as the Error Document.
