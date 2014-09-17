@@ -73,20 +73,22 @@ Setup: The bucket for a single customer's/project's data
    Save the Security Credentials, you will need them later in the setup.
    Select the user's Permissions tab and add a Policy as follows.
 
-   {
-    "Statement": [
-    {
-      "Sid": "Stmnt1",
-      "Action": [
-        "s3:*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "arn:aws:s3:::YOURBUCKETNAME","arn:aws:s3:::YOURBUCKETNAME/*"
+  `{
+   "Statement": [
+      {
+	"Sid": "Stmnt1",
+	"Action": [
+	   "s3:*"
+	],
+	"Effect": "Allow",
+	"Principal": "*",
+	"Resource": [
+	   "arn:aws:s3:::testbucket-theatermania-com",
+	   "arn:aws:s3:::testbucket-theatermania-com/*"
+	]	
+      }
       ]
-    }
-    ]
-   }
+    }`
 
  - Repeat this procedure for each customer/project bucket you need.
 
