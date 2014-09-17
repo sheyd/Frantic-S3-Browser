@@ -23,7 +23,7 @@ http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Irel
    "Add Bucket Policy". Paste this in, replacing "YOURBUCKETNAME" with the name
    of your bucket, and save the policy:
 
-   {
+   `{
      "Version": "2014-9-18",
      "Statement": [
 	{
@@ -31,10 +31,10 @@ http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Irel
 	  "Effect": "Allow",
 	  "Principal": "*",
 	  "Action": "s3:GetObject",
-	  "Resource": "arn:aws:s3:::YOURBUCKETNAME/`*`"
+	  "Resource": "arn:aws:s3:::YOURBUCKETNAME/*"
 	}
       ]
-   }
+   }`
   
  - Enable Website Access
    Select the "Website Access" tab in Properties. Check Enabled [X], specify
